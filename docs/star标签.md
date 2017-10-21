@@ -61,5 +61,5 @@ Human: A mango is a fruit
 Robot: How mango can not be a fruit?
 ```
 
-&lt;star index = "1"/&gt; 常被用作 &lt;star /&gt;
+&lt;star index = "1"/> 常被用作 &lt;star />
 
