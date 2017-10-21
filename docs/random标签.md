@@ -13,15 +13,6 @@
 </random>
 ```
 
-例如下面的对话
-
-```
-Human: Hi
-Robot: Hello!
-Human: Hi
-Robot: Hi! Nice to meet you!
-```
-
 ## 例子
 
 **random.aiml**
@@ -43,5 +34,11 @@ Robot: Hi! Nice to meet you!
 </aiml>
 ```
 
+## 对话
 
-
+```
+Human: Hi
+Robot: Hello!
+Human: Hi
+Robot: Hi! Nice to meet you!
+```

@@ -1,15 +1,15 @@
-- AIML 总览
+- **AIML 总览**
   - [AIML 介绍](AIML 介绍.md)
   - [AIML 基本标签](AIML 基本标签.md)
-- 扩展标签
-  - [star 标签](star标签.md)
-  - [srai 标签](srai标签.md)
-  - [random 标签](random标签.md)
-  - [set，get 标签](setget标签.md)
-  - [that 标签](that标签.md)
-  - [topic 标签](topic标签.md)
-  - [think 标签](think标签.md)
-  - [condition 标签](condition标签.md)
-- 细节分析
+- **扩展标签**
+  - [star](star标签.md)
+  - [srai](srai标签.md)
+  - [random](random标签.md)
+  - [set，get](setget标签.md)
+  - [that](that标签.md)
+  - [topic](topic标签.md)
+  - [think](think标签.md)
+  - [condition](condition标签.md)
+- **过程分析**
   - [对 AimlParser 元素栈的分析](aimlparser元素栈分析.md)
-  - [对 learn 函数中生产元素树的分析](learn函数生产元素树的分析.md)
+  - [对 learn 函数中生产元素树的分析](learn函数生成元素树的分析.md)

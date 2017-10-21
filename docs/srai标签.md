@@ -37,36 +37,9 @@ Human: DO YOU KNOW WHO Isaac Newton IS?
 
 此时，**&lt;srai&gt; **标签就发挥作用了。它可以将用户的模式 \(pattern\) 作为一个模板。
 
-### 第一步：创建类别 \(category\)
+### 例子
 
-```xml
-<category>
-   <pattern>WHO IS ALBERT EINSTEIN?</pattern>
-   <template>Albert Einstein was a German physicist.</template>
-</category>
-
-<category>
-   <pattern> WHO IS Isaac NEWTON? </pattern>
-   <template>Isaac Newton was a English physicist and mathematician.</template>
-</category>
-```
-
-### 第二步：使用 &lt;srai&gt; 创建通用类别
-
-```xml
-<category>
-   <pattern>DO YOU KNOW WHO * IS?</pattern>
-
-   <template>
-      <srai>WHO IS <star/></srai>
-   </template>
-
-</category>
-```
-
-## 例子：
-
-创建测试 aiml 或 csv 文件：
+创建测试 aiml ：
 
 **srai.aiml**
 
@@ -92,7 +65,7 @@ Human: DO YOU KNOW WHO Isaac Newton IS?
 </aiml>
 ```
 
-#### 验证结果
+### 对话
 
 对话如下：
 
@@ -118,28 +91,6 @@ Robot: GoodBye!
 
 在这里使用 &lt;srai&gt; 标签。
 
-### 第一步：创建类别
-
-```xml
-<category>
-   <pattern>BYE</pattern>
-   <template>Good Bye!</template>
-</category>
-```
-
-### 第二步：使用 &lt;srai&gt; 标签创建通用类别
-
-```xml
-<category>
-   <pattern>BYE *</pattern>
-
-   <template>
-      <srai>BYE</srai>
-   </template>
-
-</category>
-```
-
 ### 例子
 
 ```xml
@@ -160,7 +111,7 @@ Robot: GoodBye!
 </aiml>
 ```
 
-#### 对话结果
+### 对话
 
 ```
 Human: Bye
@@ -184,28 +135,6 @@ Robot: Development Center!
 
 无论用户说 **Factory **还是** Industry **机器人都应回复 **Development Center!**。
 
-### 第一步：创建类别
-
-```xml
-<category>
-   <pattern>FACTORY</pattern>
-   <template>Development Center!</template>
-</category>
-```
-
-### 第二步：使用 &lt;srai&gt; 标签创建通用类别
-
-```xml
-<category>
-   <pattern>INDUSTRY</pattern>
-
-   <template>
-      <srai>FACTORY</srai>
-   </template>
-
-</category>
-```
-
 ### 例子
 
 ```xml
@@ -226,7 +155,7 @@ Robot: Development Center!
 </aiml>
 ```
 
-#### 结果
+### 对话
 
 ```
 Human: Factory
@@ -238,15 +167,6 @@ Robot: Development Center!
 ## 同义词检测
 
 使用 **srai**，我们可以为特定关键词的用户输入进行相同的回复，不论关键词出现在句子的什么位置。
-
-比如：
-
-```
-Human: I love going to school daily.
-Robot: School is an important institution in a child's life.
-Human: I like my school.
-Robot: School is an important institution in a child's life.
-```
 
 ### 例子
 
@@ -287,6 +207,15 @@ Robot: School is an important institution in a child's life.
    </category>
 
 </aiml>
+```
+
+### 对话
+
+```
+Human: I love going to school daily.
+Robot: School is an important institution in a child's life.
+Human: I like my school.
+Robot: School is an important institution in a child's life.
 ```
 
 

@@ -16,15 +16,6 @@
 <get name = "variable-name"></get>
 ```
 
-例如如下对话：
-
-```
-Human: I am Mahesh
-Robot: Hello Mahesh!
-Human: Good Night
-Robot: Good Night Mahesh! Thanks for the conversation!
-```
-
 ## 例子
 
 **setget.aiml**
@@ -49,5 +40,11 @@ Robot: Good Night Mahesh! Thanks for the conversation!
 </aiml>
 ```
 
+## 对话
 
-
+```
+Human: I am Mahesh
+Robot: Hello Mahesh!
+Human: Good Night
+Robot: Good Night Mahesh! Thanks for the conversation!
+```

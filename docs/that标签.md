@@ -8,17 +8,6 @@
 <that> template </that>
 ```
 
-考虑以下对话：
-
-```
-Human: Hi Alice! What about movies?
-Robot: Do you like comedy movies?
-Human: No
-Robot: Ok! But I like comedy movies.
-```
-
-
-
 ## 例子
 
 **that.aiml**
@@ -44,6 +33,15 @@ Robot: Ok! But I like comedy movies.
    </category> 
    
 </aiml>
+```
+
+## 对话
+
+```
+Human: Hi Alice! What about movies?
+Robot: Do you like comedy movies?
+Human: No
+Robot: Ok! But I like comedy movies.
 ```
 
 

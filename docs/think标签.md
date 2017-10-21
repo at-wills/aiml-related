@@ -12,15 +12,6 @@
 </think>
 ```
 
-考虑如下对话：
-
-```
-Human: My name is Mahesh
-Robot: Hello!
-Human: Byeee
-Robot: Hi Mahesh Thanks for the conversation!
-```
-
 ## 例子
 
 **think.aiml**
@@ -45,5 +36,13 @@ Robot: Hi Mahesh Thanks for the conversation!
 </aiml>
 ```
 
+## 对话
+
+```
+Human: My name is Mahesh
+Robot: Hello!
+Human: Byeee
+Robot: Hi Mahesh Thanks for the conversation!
+```
 
 

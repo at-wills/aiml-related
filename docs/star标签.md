@@ -27,8 +27,6 @@
 
 ## 例子
 
-在路径**bots &gt;test &gt; aiml** 创建 star.aiml ，或在 **bots &gt; test &gt; aimlif **创建 star.aiml.csv 文件。
-
 **star.aiml**
 
 ```xml
@@ -52,15 +50,7 @@
 </aiml>
 ```
 
-### 执行程序
-
-打开命令行终端，进入项目根目录运行：
-
-```shell
-java -cp lib/Ab.jar Main bot = test action = chat trace = false
-```
-
-### 验证结果
+## 对话
 
 可以看到如下对话：
 
