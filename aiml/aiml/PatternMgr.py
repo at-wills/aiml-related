@@ -142,7 +142,8 @@ class PatternMgr:
 		input = string.upper(pattern)
 		input = re.sub(self._puncStripRE, " ", input)
 		if that.strip() == u"": that = u"ULTRABOGUSDUMMYTHAT" # 'that' must never be empty
-		thatInput = string.upper(that)
+		# thatInput = string.upper(that)
+		thatInput = that
 		thatInput = re.sub(self._puncStripRE, " ", thatInput)
 		thatInput = re.sub(self._whitespaceRE, " ", thatInput)
 		if topic.strip() == u"": topic = u"ULTRABOGUSDUMMYTOPIC" # 'topic' must never be empty
@@ -169,7 +170,8 @@ class PatternMgr:
 		input = re.sub(self._puncStripRE, " ", input)
 		input = re.sub(self._whitespaceRE, " ", input)
 		if that.strip() == u"": that = u"ULTRABOGUSDUMMYTHAT" # 'that' must never be empty
-		thatInput = string.upper(that)
+		# thatInput = string.upper(that)
+		thatInput = that
 		thatInput = re.sub(self._puncStripRE, " ", thatInput)
 		thatInput = re.sub(self._whitespaceRE, " ", thatInput)
 		if topic.strip() == u"": topic = u"ULTRABOGUSDUMMYTOPIC" # 'topic' must never be empty
