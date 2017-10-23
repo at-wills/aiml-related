@@ -7,14 +7,23 @@ PYAIML 源码可以直接通过 pip 安装的 aiml 包获得，当然你也可�
 PYAIML 项目的目录结构如下，主要分两部分。一是 AIML 的解析代码，该部分定义了 AIML 的语法规则以及解析规则，是 AIML 的核心代码部分；一是 AIML 语料库，该部分定义了机器人的问答规则，是机器人的“主脑”。
 
 ```
-
+├── alice			———— 语料库
+│   ├── alice.aiml
+│   └── startup.xml
+├── AimlParser.py
+├── DefaultSubs.py
+├── __init__.py
+├── Kernel.py
+├── PatternMgr.py
+├── Utils.py
+└── WordSub.py
 ```
 
 ## 项目运行测试
 
 测试代码如下
 
-```py
+```python
 # -*- coding: utf-8 -*-
 import aiml
 import os

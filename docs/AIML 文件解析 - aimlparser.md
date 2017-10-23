@@ -537,7 +537,7 @@ key：({category}, {that}, {topic})
 value:
 value：
 [
-    'template', {}
+    'template', {},
     ['text', {'xml:space': 'default'}, u'answer']
 ]
 OR
