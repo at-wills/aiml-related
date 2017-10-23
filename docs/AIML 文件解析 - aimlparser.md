@@ -529,6 +529,8 @@ elif self._state == self._STATE_InsideTemplate:
 
 ![](/assets/model.png)
 
+> 若图像不清晰，可以右键点击图片-在新标签页中打开图片，查看大图
+
 **存放于 categories 的结构化的对象形式如下**
 
 ```
