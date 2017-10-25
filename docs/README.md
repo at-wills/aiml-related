@@ -1,6 +1,6 @@
 # 关于 AIML 的一些内容
 
-英文教程原文参考 [AIML Tutorial](https://www.tutorialspoint.com/aiml/index.htm)
+英文教程参考 [AIML Tutorial](https://www.tutorialspoint.com/aiml/index.htm) ，[AI Chat Bot in Python with AIML](http://www.devdungeon.com/content/ai-chat-bot-python-aiml#sessions)
 
 代码分析参考 [此教程](https://faunleaf.gitbooks.io/pyaiml/content/)  
 
