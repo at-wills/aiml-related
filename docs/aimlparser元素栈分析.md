@@ -1,6 +1,6 @@
 # 对 AimlParser 元素栈的分析
 
-AimlParser 是pyaiml中用于解析 AIML 文件的类，通过使用 python 中的 xml.sax 类驱动解析 xml 树形结构。详细参考 [此处教程](https://faunleaf.gitbooks.io/pyaiml/content/chapter2.html) 最后一部分的解释。
+AimlParser 是pyaiml中用于解析 AIML 文件的类，通过使用 python 中的 xml.sax 类驱动解析 xml 树形结构。详细参考 [AIML 文件解析 - AimlParser](AIML 文件解析 - aimlparser.md) 的解释。
 
 **以下方 xml 为例：**
 

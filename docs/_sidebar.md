@@ -7,7 +7,7 @@
   - [AIML 文件解析 - AimlParser](AIML 文件解析 - aimlparser.md)
   - [对 AimlParser 元素栈的分析](aimlparser元素栈分析.md)
   - [对 learn 函数中生产元素树的分析](learn函数生成元素树的分析.md)
-  - [基本的 response 过程](response过程.md)
+  - [基本的 respond 过程分析](respond过程分析.md)
 - **扩展标签**
   - [star](star标签.md)
   - [srai](srai标签.md)
@@ -17,3 +17,4 @@
   - [topic](topic标签.md)
   - [think](think标签.md)
   - [condition](condition标签.md)
+  - [input](input标签.md)
