@@ -81,7 +81,9 @@ else:
     self._elemStack[-1].append(["text", {"xml:space": self._whitespaceBehaviorStack[-1]}, text])
 ```
 
-另外关于 `_whitespaceBehaviorStack` 这个栈，它负责处理记录的是每行 aiml 中的多余空白符，即属于两个标签（不必配对）中间的空白符。当 aiml 内容格式如上方所示，含有缩进所用的空白符时，这个栈将记录它们，并在解析过程中被存入元素栈，即 `['text', {'xml:space': 'default'}, u'answer1']` 部分内容。实际发布的项目中，使用的 aiml 文件中空白符的数量会被减少。该条记录的实际作用尚未得知…
+另外关于 `_whitespaceBehaviorStack` 这个栈，它负责处理记录的是每行 aiml 中的多余空白符，即属于两个标签（不必配对）中间的空白符。当 aiml 内容格式如上方所示，含有缩进所用的空白符时，这个栈将记录它们，并在解析过程中被存入元素栈，即 `['text', {'xml:space': 'default'}, u'answer1']` 部分内容。实际发布的项目中，使用的 aiml 文件中空白符的数量会被减少。
+
+关于列表第二个元素 'xml:space' 记录的作用，参见 [respond 过程解析](respond过程解析.md) 中的 **\_processElement 整合内容** 关于空白符的解释。
 
 ### random 标签部分
 
