@@ -54,17 +54,17 @@ value:
     <template>
 ```
 
-当解析到此处时，解析类中的元素栈`_elemStack`中含有一个列表元素，该列表内容如图所示：
+当解析到此处时，解析类中的元素栈`_elemStack`中含有一个列表元素，内容如图所示：
 
-![](/assets/snipaste 2017.10.13-01.20.jpg)
+![](/assets/parser-ele-satck-1.jpg)
 
-\_elemStack 此时为含有三个元素的列表，形如
+如果输出其中的列表，形如
 
 ```
 [
     'template', {}, 
     [
-        'text', {'xml:space': 'default'}, '\n'
+        'text', {'xml:space': 'default'}, '\n    '
     ]
 ]
 ```
@@ -99,13 +99,13 @@ self._state == self._STATE_InsideTemplate and self._validInfo.has_key(name)
 
 进一步元素入栈，此时 `_elemStack` 含有两个列表元素：
 
-![](/assets/snipaste 2017.10.13-01.59.jpg)
+![](/assets/parser-ele-satck-2.jpg)
 
 ### li 标签部分
 
 解析到 li 标签的startElement 结束，栈内元素如下：
 
-![](/assets/snipaste 2017.10.13-02.04.jpg)
+![](/assets/parser-ele-satck-3.jpg)
 
 当对 li 标签内的文字内容执行 \_characters\(\) 方法，代码：
 
@@ -115,7 +115,7 @@ self._elemStack[-1].append(["text", {"xml:space": self._whitespaceBehaviorStack[
 
 将 li 标签内容正确添加进来：
 
-![](/assets/snipaste 2017.10.13-02.13.jpg)
+![](/assets/parser-ele-satck-4.jpg)
 
 程序进行到处理 li 标签结束的 \_endElement\(\) 方法，此时判断条件
 
@@ -135,7 +135,9 @@ self._elemStack[-1].append(elem)
 
 将最后 li 标签的列表出栈，加入前一个 random 标签元素中：
 
-![](/assets/snipaste 2017.10.13-02.25_0.jpg)
+![](/assets/parser-ele-satck-5.jpg)
+
+![](/assets/parser-ele-satck-6.jpg)
 
 于此同时，其对应在 \_whitespaceBehaviorStack 栈中的元素也出栈。
 
@@ -155,7 +157,7 @@ self._elemStack[-1].append(elem)
 
 当进行到下一个 li 标签时，会产生第三个元素，在其 \_endElement\(\) 方法执行过程中被压栈进入 random 标签元素内，与上一个 li 标签元素同级，如下图：
 
-![](/assets/snipaste 2017.10.13-02.37.jpg)
+![](/assets/parser-ele-satck-7.jpg)
 
 同理，在 random 的结束标签被处理时，它也被扩充进入了上一层 template 标签元素中。
 
@@ -176,13 +178,33 @@ elif name == "category":
 
 key 值如下：
 
-![](/assets/snipaste 2017.10.13-03.01.jpg)
+![](/assets/parser-ele-satck-8.jpg)
 
 ## 补充
 
 事实上，测试程序的实际结果与文章最前面提到的不同，真实数据如下：
 
-![](/assets/snipaste 2017.10.13-03.03.jpg)多出来的两个列表 `['text', {'xml:space': 'default'}, u'\n        ']`，是由于 category 中的换行带来的。
+```
+key：({category}, {that}, {topic})
+
+value:
+[
+    'template', {}, ['text', {'xml:space': 'default'}, u'\n        '],
+    ['text', {'xml:space': 'default'}, u'\n        '],
+    [
+        'random', {}, 
+        [
+            'li', {}, ['text', {'xml:space': 'default'}, u'answer1']
+        ], 
+        [
+            'li', {}, ['text', {'xml:space': 'default'}, u'answer2']
+        ]
+    ]，
+    ['text', {'xml:space': 'default'}, u'\n        ']
+]
+```
+
+多出来的两个列表 `['text', {'xml:space': 'default'}, u'\n        ']`，是由于 category 中的**换行符号**带来的。
 
 纠正原 aiml 文件中的内容如下：
 
@@ -195,5 +217,7 @@ key 值如下：
 </aiml>
 ```
 
-此时结果符合预测：![](/assets/snipaste 2017.10.13-17.07.jpg)
+此时结果符合预测：
+
+![](assets/parser-ele-satck-10.jpg)
 
