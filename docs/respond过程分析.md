@@ -272,11 +272,19 @@ handlerFunc 从 _elementProcessors 中选择函数实例：
 
 self._elementProcessors = {
     # 省略内容...
- 
-    "text":         self._processText,
-    "template":     self._processTemplate,
-    "that":         self._processThat,
-  
+    . . .
+    "random": self._processRandom,
+    "text": self._processText,
+    "sentence": self._processSentence,
+    "set": self._processSet,
+    "size": self._processSize,
+    "sr": self._processSr,
+    "srai": self._processSrai,
+    "star": self._processStar,
+    "system": self._processSystem,
+    "template": self._processTemplate,
+    "that": self._processThat,
+    . . .
     # 省略内容...
 }
 ```
