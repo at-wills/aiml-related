@@ -8,6 +8,7 @@
   - [对 AimlParser 元素栈的分析](aimlparser元素栈分析.md)
   - [对 learn 函数中生产元素树的分析](learn函数生成元素树的分析.md)
   - [基本的 respond 过程分析](respond过程分析.md)
+  - [LOAD ALICE 与 Kernel.learn 方法](LOAD ALICE 与 Kernel.learn 方法.md)
 - **扩展标签**
   - [star](star标签.md)
   - [srai](srai标签.md)
